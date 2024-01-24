@@ -19,4 +19,4 @@ Next screen should say. - Welcome “UserName”.
 
 A web page with register and login button have been created.
 
-The pop up form for the registration and login with respective fields have been created with submit option.
+The pop up form for the registration and login with respective fields have been created with submit button.
