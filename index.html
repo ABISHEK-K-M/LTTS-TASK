@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+	<div class="main">
+		<video autoplay muted loop id="video" plays-inline>
+			<source src="Background.mp4" type="video/mp4">
+		</video>
+        
+		<div class="overlay"></div>
+		<div class="navbar">
+			<div class="ttle">LTTS TASK</div>
+		</div>
+		<div class="heading" id="mainContent">
+				<h1 class="head">WELCOME TO MY <span>WEBSITE</span></h1>
+
+				<div class="btns">
+					<a class="btn1" href="#" onclick="showPopupForm('registerForm')">REGISTER</a>
+					<a class="btn2" href="#" onclick="showPopupForm('loginForm')">LOGIN</a>
+				</div>	
+		</div>
+	</div>
+
+
+    <div class="popup-form" id="registerForm">
+        <div class="register-form glow">
+            <h2>Register</h2>
+            <form>
+                <div class = "name-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                </div>
+                <div class = "mail-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+                </div>
+                <div class = "phone-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <button onclick="hidePopupForm('registerForm')">Close</button>
+        </div>
+    </div>
+
+
+    <div class="popup-form" id="loginForm">
+        <div class="login-form glow">
+            <h2>Login</h2>
+            <form>
+                <div class ="email-group">
+                    <label for="loginEmail">Email ID:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+
+                <div class = "password-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+            <button onclick="hidePopupForm('loginForm')">Close</button>
+        </div>
+    </div>
+    <script>
+        // JavaScript functions to show and hide the pop-up forms
+        function showPopupForm(formId) {
+            document.getElementById("mainContent").style.display = "none";
+            document.getElementById(formId).style.display = "block";
+        }
+
+        function hidePopupForm(formId) {
+            document.getElementById("mainContent").style.display = "block";
+            document.getElementById(formId).style.display = "none";
+        }
+    </script>	
+</body>
+</html>
